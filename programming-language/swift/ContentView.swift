@@ -43,10 +43,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
-
 struct DayForecast: View {
     let day: String
     let isRainy: Bool
@@ -85,4 +81,8 @@ struct DayForecast: View {
         }
         .padding()
     }
+}
+
+#Preview {
+    ContentView()
 }
