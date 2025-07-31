@@ -14,6 +14,7 @@ struct DiceRoller: View {
         VStack {
             Text("Dice Roller")
                 .font(.largeTitle.lowercaseSmallCaps())
+                .foregroundStyle(.white)
 
             HStack {
                 ForEach(1...numberOfDice, id: \.description) { _ in
@@ -22,14 +23,14 @@ struct DiceRoller: View {
             }
 
             HStack {
-                Button("Remove Dice") {
+                Button("Remove Dice", systemImage: "minus.circle.fill") {
                     withAnimation {
                         numberOfDice -= 1
                     }
                 }
                 .disabled(numberOfDice == 1)
 
-                Button("Add Dice") {
+                Button("Add Dice", systemImage: "plus.circle.fill") {
                     withAnimation {
                         numberOfDice += 1
                     }
@@ -37,8 +38,13 @@ struct DiceRoller: View {
                 .disabled(numberOfDice == 5)
             }
             .padding()
+            .labelStyle(.iconOnly)
+            .font(.title)
         }
         .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.appBackground)
+        .tint(.white)
     }
 }
 
@@ -47,10 +53,11 @@ struct DiceView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "die.face.\(numberOfPips)")
+            Image(systemName: "die.face.\(numberOfPips).fill")
                 .resizable()
                 .frame(maxWidth: 100, maxHeight: 100)
                 .aspectRatio(1, contentMode: .fit)
+                .foregroundStyle(.black, .white)
 
             Button("Roll") {
                 withAnimation{

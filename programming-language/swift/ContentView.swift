@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+let gradientColors: [Color] = [
+    .gradientTop,
+    .gradientBottom
+]
+
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 25) {
@@ -40,6 +45,7 @@ struct ContentView: View {
             }
         }
         .padding()
+        .background(Gradient(colors: gradientColors))
     }
 }
 
@@ -85,4 +91,5 @@ struct DayForecast: View {
 
 #Preview {
     ContentView()
+        .frame(maxHeight: .infinity)
 }

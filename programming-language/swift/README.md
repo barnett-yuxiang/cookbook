@@ -7,3 +7,5 @@ Key Points:
 - TabView
 - Layout and style
 - Update the UI with state
+- Improve your app design
+- Create dynamic content
