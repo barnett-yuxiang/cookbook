@@ -11,7 +11,8 @@ import SwiftUI
 struct ChatPrototypeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ContentView()
+            Pick_a_Pal()
         }
     }
 }

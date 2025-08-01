@@ -17,7 +17,7 @@ struct DiceRoller: View {
                 .foregroundStyle(.white)
 
             HStack {
-                ForEach(1...numberOfDice, id: \.description) { _ in
+                ForEach(1 ... numberOfDice, id: \.description) { _ in
                     DiceView()
                 }
             }
@@ -60,8 +60,8 @@ struct DiceView: View {
                 .foregroundStyle(.black, .white)
 
             Button("Roll") {
-                withAnimation{
-                    numberOfPips = Int.random(in: 1...6)
+                withAnimation {
+                    numberOfPips = Int.random(in: 1 ... 6)
                 }
             }
             .buttonStyle(.bordered)

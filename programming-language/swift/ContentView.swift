@@ -9,7 +9,7 @@ import SwiftUI
 
 let gradientColors: [Color] = [
     .gradientTop,
-    .gradientBottom
+    .gradientBottom,
 ]
 
 struct ContentView: View {

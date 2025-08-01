@@ -30,7 +30,6 @@ struct AboutMe: View {
                     Label("Fun Facts", systemImage: "hand.thumbsup")
                 }
         }
-
     }
 }
 
