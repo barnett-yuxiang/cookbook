@@ -9,3 +9,4 @@ Key Points:
 - Update the UI with state
 - Improve your app design
 - Create dynamic content
+- Data modeling
